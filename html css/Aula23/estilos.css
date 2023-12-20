@@ -1,0 +1,7 @@
+/*
+    Pseudo-classe :not()
+    :not() -> Se refere a uma negação!
+*/
+p:not(.meio){
+    color: blue;
+}

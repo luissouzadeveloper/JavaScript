@@ -1,0 +1,36 @@
+/*PSEUDO-ELEMENTOS*/
+
+/*
+    ::after -> Cria um pseudo-elemento no último filho selecionado
+    ::before -> Cria um pseudo-elemento no primeiro filho selecionado
+*/
+
+ul li::after{
+    content: ' - ';
+    background: red;
+    color: #fff;
+}
+
+/*
+    ::first-letter -> Seleciona a primeria letra de um parágrafo por exemplo e formata no css
+    ::first-line -> Seleciona a primeira linha do texto e permite a formatação css nessa área 
+    ::selection -> Serve para formatar o parágrafo quando estiver sendo selecionado com o cursor do mouse.   
+*/
+
+/*p::first-letter{
+    font-size: 50px;
+    display: block;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+p::first-line{
+    background-color: red;
+}
+p::selection{
+    background-color: black;
+    color: #fff;
+}*/
+
+::placeholder{
+    color: green;
+}

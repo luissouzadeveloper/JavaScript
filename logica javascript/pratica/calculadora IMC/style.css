@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container{
+    margin: 100px;
+}
+
+.descricao h1{
+    color: rgb(84, 84, 252);
+    margin: 10px 0;
+    text-align: center;
+}
+.descricao p{
+    text-align: justify;
+    width: 1000px;
+    margin: 10px auto;
+    color: #7a7a7a;
+}
+
+.formulario{
+    padding: 20px;
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+.formulario span{
+    color: rgb(84, 84, 252);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.formulario input{
+    height: 40px;
+    border: 2px solid rgb(84, 84, 252);
+    border-radius: 5px;
+}
+
+.botoes{
+    display: block;
+    margin-top: 30px;
+}
+.botoes button{
+    background-color: rgb(84, 84, 252);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.resultado{
+    margin: 20px auto;
+}

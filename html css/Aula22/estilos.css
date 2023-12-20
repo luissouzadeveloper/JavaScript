@@ -1,0 +1,62 @@
+/*PSEUDO-CLASSES*/
+
+/*:hover -> Quando o mouse passa por cima, executa uma ação*/
+.titulo:hover{
+    background-color: red;
+}
+
+.titulo{
+    transition: all .5s ease-in-out;
+}
+
+a{
+    color: orange;
+}
+
+/*
+    :link -> Se refere a link nunca visitado
+    :visited -> Se refere a link já visitado
+    :active -> Se refere a um link que foi clicado
+*/
+a:link{
+    color: pink;
+}
+a:visited{
+    color: red;
+}
+a:hover{
+    background-color: darkcyan;
+    color: white;
+    text-decoration: none;
+}
+a:active{
+    background-color: darkgreen;
+    color: white;
+    text-decoration: none;
+}
+
+/*
+    :focus -> Indica que algum elemento tem um foco
+    :disabled -> Indica que um elemento está desabilitado
+    :enabled -> Indica que um elemento está habilitado
+    :checked -> Indica que o elemento tá checado
+*/
+/*input:focus{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.541);
+    outline: none;
+    border: 1px solid black;
+}
+input:disabled{
+    background-color: greenyellow;
+    cursor: not-allowed;
+}*/
+input:checked + p{
+    background-color: yellow;
+}
+
+/*
+    :first-child -> Só seleciona o primeiro elemento de uma lista ou carreira.
+*/
+.pai .lista li:last-child{
+    background-color: green;
+}

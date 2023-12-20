@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra a tabuada</title>
+
+    <!--CSS 3-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Font Awsome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <h1>Tabuada de multiplicação</h1>
+        <div id="formulario">
+            <i class="fa-solid fa-x fa-2xl"></i>
+            <label for="tabuada">Informe o número da tabuada</label>
+            <input type="number" name="tabuada" id="tab">
+
+            <button id="btnTab" onclick="gerar()" onmouseenter="entrar()" onmouseout="sair()">Gerar</button>
+        </div>
+
+        <div class="resultado"></div>
+    </div>
+
+    <!--JavaScript-->
+    <script src="script.js"></script>
+</body>
+</html>

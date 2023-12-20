@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(to bottom, #000000, #2b2b2b);
+}
+
+#container{
+    background-color: #fff;
+    width: 70%;
+    margin: 30px auto;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+#container h1{
+    margin: 10px auto;
+}
+#container button{
+    background-color: #000000;
+    color: #fff;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#elementos{
+    background-color: #fff;
+    height: 50vh;
+    width: 70%;
+    margin: auto;
+    border-radius: 10px;
+}

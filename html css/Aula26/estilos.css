@@ -1,0 +1,16 @@
+/*
+    Especificidade
+
+    1- Id
+    2- Classes, Atributos, Pseudo-classes
+    3- Elementos e Pseudo-elementos
+
+    !important
+*/
+
+#paragrafo{
+    color: red;
+}
+.paragrafo{
+    color: yellow !important;
+}
