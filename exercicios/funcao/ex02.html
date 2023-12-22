@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções exercícios</title>
+</head>
+<body>
+    <div>
+        Informe um valor: <input type="number" id="valor">
+        <button id="btn">Calcular</button>
+    </div>
+    <span id="resultado"></span>
+    <script>
+        let botao = document.querySelector('#btn');
+        botao.addEventListener('click', mostraNumero);
+
+        function mostraNumero(){
+            let resultado = document.querySelector('#resultado');
+            resultado.innerHTML = `${numeroAoCubo()}`;
+        }
+
+        function numeroAoCubo(cubo){
+            let numero = document.querySelector('#valor').value;
+            cubo = Math.pow(Number(numero), 3);
+            return cubo;
+        }
+    </script>
+</body>
+</html>
