@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de temperatura</title>
+</head>
+
+<body>
+    <h1>Conversor de temperatura</h1>
+
+    <p class="resultado"></p>
+
+    <script>
+        function menu() {
+            let op = Number(prompt('Escolha uma opção: 1- Converter Celsius 2- Converter Fahrenheit'));
+
+            if (op === 1) {
+                convCelsius();
+            } else if (op === 2) {
+                convFahrenheit()
+            } else {
+                alert('Valor inválido! Tente novamente');
+            }
+        }
+
+        function convFahrenheit(){
+            let celsius = Number(prompt('Informe a temperatura em celsius: '));
+            let fahrenheit = (celsius * 9 / 5) + 32;
+            let resultado = document.querySelector('.resultado');
+            resultado.innerHTML = `A temperatura em fahrenheit é ${fahrenheit.toFixed(1)}°F`
+        }
+
+        function convCelsius() {
+            let fahrenheit = Number(prompt('Informe a temperatura em fahrenheit: '));
+            let celsius = (fahrenheit - 32) * 5 / 9;
+            let resultado = document.querySelector('.resultado');
+            resultado.innerHTML = `A temperatura em celsius é ${celsius.toFixed(1)}°C`
+        }
+
+        menu()
+    </script>
+</body>
+
+</html>
