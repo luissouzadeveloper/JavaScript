@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factory function</title>
+</head>
+<body>
+    <script>
+        function Pessoa(nome, idade, peso){
+            return{
+                nome: nome,
+                idade: idade,
+                peso: peso,
+
+                mostrar(){
+                    return `O ${this.nome} tem ${this.idade} anos e pesa ${this.peso} kg`
+                }
+            }
+        }
+
+        let p1 = Pessoa('Raimundo', 60, 70)
+        document.write(p1.mostrar());
+    </script>
+</body>
+</html>
