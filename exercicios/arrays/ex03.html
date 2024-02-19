@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+<body>
+    <script>
+        /*
+            Refaça o script anterior, mas agora pergunte ao usuário quantos números ele deseja inserir no array.
+            Depois, o usuário vai preenchendo elemento por elemento do vetor.
+        */
+
+        function array(){
+            let elemento;
+            let vetor = [];
+            let quantidade = Number(prompt('Informe quantos valores você quer inserir? '));
+
+            for(let i = 0; i < quantidade; i++){
+                elemento = Number(prompt('Informe o valor para inserir: '));
+                vetor.push(elemento);
+            }
+
+            document.body.innerHTML = vetor;
+        }
+
+        array();
+    </script>
+</body>
+</html>
