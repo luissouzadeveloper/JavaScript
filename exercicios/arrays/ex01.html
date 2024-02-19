@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <h1>Exercício 1</h1>
+
+    <script>
+        // Crie uma função que recebe um array de 2 números e coloque eles em ordem crescente. Não use o método sort.
+
+        let vetor = () => {
+            let array = [];
+
+            for(let i = 1; i <= 2; i++){
+                let v = Number(prompt('Informe um valor: '));
+                array.push(v);
+                array.sort();
+            }
+
+            document.body.innerHTML = array;
+        }
+
+        vetor();
+    </script>
+</body>
+</html>
