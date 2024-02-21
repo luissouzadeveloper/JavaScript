@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema eleitoral - Cadastro</title>
+
+    <style>
+        body{
+            background-color: #25a825;
+            
+        }
+
+        h1{
+            text-align: center;
+            color: #fafa2f;
+            font-size: 40px;
+        }
+
+        .sistema, .dados{
+            display: flex;
+            flex-direction: column;
+            background-color: #fafa2f;
+            width: 300px;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 7px;
+            margin: 40px auto;
+        }
+        .dados{
+            display: block;
+        }
+        .sistema > label, .sistema > input, .sistema > button{
+            margin: 7px;
+            color: #25a825;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .dados > p, .dados > p, .dados > p{
+            margin: 7px;
+            color: #25a825;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .sistema > button{
+            background-color: #25a825;
+            color: #fafa2f;
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 500ms ease-in-out;
+        }
+        .sistema > button:hover{
+            background-color: #30eb30;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cadastre-se</h1>
+
+    <div class="sistema">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="cxnome">
+        <label for="idade">Idade:</label>
+        <input type="number" name="idade" id="cxidade">
+        <button class="btnAdd">Adicionar</button>
+    </div>
+
+    <div class="dados">
+        <p class="dadoNome">Nome</p>
+        <p class="dadoIdade">Idade</p>
+        <p class="resultadoFinal">Situação</p>
+    </div>
+
+    <script>
+        let btnAdd = document.querySelector('.btnAdd');
+        btnAdd.addEventListener('click', inserirNomesEIdades)
+
+        function inserirNomesEIdades() {
+            let inputNome = document.querySelector('#cxnome').value
+            let arrayNomes = [];
+            arrayNomes.push(inputNome);
+
+            let inputIdade = document.querySelector('#cxidade').value
+            let arrayIdades = [];
+            arrayIdades.push(inputIdade);
+
+            let idadeFiltrada = arrayIdades.filter((idade) => {
+                let situacaoVoto = document.querySelector('.resultadoFinal')
+
+                if (idade < 16) {
+                    return situacaoVoto.innerHTML = `Situação: você tem ${idade} anos e não vota`
+                } else if (idade >= 16 && idade <= 17 || idade >= 70) {
+                    return situacaoVoto.innerHTML = `Situação: você tem ${idade} anos e tem voto opcional`
+                } else {
+                    return situacaoVoto.innerHTML = `Situação: você tem ${idade} anos e tem voto obrigatório`
+                }
+            });
+
+            let saidaNome = document.querySelector('.dadoNome').innerHTML = `Nome: ${inputNome}<br>`;
+
+            let saidaIdade = document.querySelector('.dadoIdade').innerHTML = `Idade: ${inputIdade}<br>`;
+
+            let situacaoVoto = document.querySelector('.resultadoFinal').innerHTML = `${idadeFiltrada()}<br>`;
+        }
+    </script>
+</body>
+
+</html>
