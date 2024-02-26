@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+
+<body>
+    <script>
+        const produtos = [
+            {
+                produto: 'PS5',
+                preco: 5000
+            },
+            {
+                produto: 'Mouse',
+                preco: 60
+            },
+            {
+                produto: 'Teclado',
+                preco: 120
+            }
+        ];
+
+        let total = produtos.reduce((acumulador, prod) => {
+            return acumulador + prod.preco;
+        }, 0);
+
+        document.write(total);
+    </script>
+</body>
+
+</html>
